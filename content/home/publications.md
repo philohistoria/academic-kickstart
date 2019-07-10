@@ -7,7 +7,7 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 90  # Order that this section will appear.
 
-title = "Recent Publications"
+title = "Publications"
 subtitle = ""
 
 [content]
@@ -24,19 +24,23 @@ subtitle = ""
   order = "desc"
 
   # Filter posts by a taxonomy term.
+  # I excluded featured articles, since they were used for working papers
   [content.filters]
     tag = ""
     category = ""
     publication_type = ""
-    exclude_featured = false
+    exclude_featured = true
   
 [design]
   # Toggle between the various page layout types.
   #   1 = List
   #   2 = Compact
+  #      2 is compact list
   #   3 = Card
+  #      3 is a card with title as title and abstract as body
   #   4 = Citation (publication only)
-  view = 2
+  #      4 is the traditional citation style 
+  view = 4
   
 [design.background]
   # Apply a background color, gradient, or image.
@@ -66,6 +70,7 @@ subtitle = ""
  css_class = ""
 +++
 
+<!-- 
 {{% alert note %}}
-Quickly discover relevant content by [filtering publications]({{< ref "/publication/_index.md" >}}).
-{{% /alert %}}
+Quickly discover relevant content by [filtering publications]({{< ref "/publication/_index.md">}}).
+{{% /alert %}} -->
